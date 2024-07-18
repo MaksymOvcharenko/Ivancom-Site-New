@@ -10,11 +10,12 @@ import {
   FaTimes,
 } from "react-icons/fa";
 
-const MobileMenu = ({ onClose }) => {
+// eslint-disable-next-line react/prop-types
+const MobileMenu = ({ onCloses }) => {
   return (
     <div className={styles.overlay}>
       <div className={styles.mobileMenu}>
-        <button className={styles.closeButton} onClick={onClose}>
+        <button className={styles.closeButton} onClick={onCloses}>
           <FaTimes />
         </button>
         <ul className={styles.mobileMenuLinks}>
