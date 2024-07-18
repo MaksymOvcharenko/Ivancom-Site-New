@@ -22,14 +22,14 @@ const MobileMenu = ({ onCloses }) => {
           <li>
             <Link to="/">Головна</Link>
           </li>
-          <li className={styles.dropdown}>
+          <li className={styles.dropdownm}>
             <Link className={styles.accordion}>Послуги</Link>
-            <ul className={styles.submenu}>
+            <ul className={styles.submenum}>
               <li className={styles.dropdowns}>
                 <Link to="/services/ua-pl" className={styles.accordion}>
                   UA-PL
                 </Link>
-                <ul className={styles.subsubmenu}>
+                <ul className={styles.subsubmenum}>
                   <li>
                     <Link to="/services/ua-pl/packages">Посилки</Link>
                   </li>
