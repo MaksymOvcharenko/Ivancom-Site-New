@@ -20,7 +20,7 @@ function Home() {
         iure, fugiat laudantium saepe id totam ratione rerum amet quasi
         repudiandae assumenda?
       </p>
-      <img src={site} alt="sss" width="" />
+      {/* <img src={site} alt="sss" width="" /> */}
     </div>
   );
 }

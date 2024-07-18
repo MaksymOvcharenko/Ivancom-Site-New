@@ -12,7 +12,7 @@ import {
   FaTiktok,
 } from "react-icons/fa";
 import Logo from "../Logo/Logo";
-import MobileMenu from "./MobileMenu";
+// import MobileMenu from "./MobileMenu";
 function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -27,13 +27,13 @@ function Header() {
       <div className={styles.logo}>
         <Logo />
       </div>
-      <button
+      {/* <button
         onClick={toggleMobileMenu}
         className={styles.mobileMenuButton}
         aria-label="Toggle menu"
       >
         {isMobileMenuOpen ? <FaTimes /> : <FaBars />}
-      </button>
+      </button> */}
 
       <nav className={`${styles.nav} ${isMobileMenuOpen ? styles.open : ""}`}>
         <ul>

@@ -18,16 +18,18 @@ const styles = {
     width: "24px",
   },
   bmCross: {
-    background: "#bdc3c7",
+    background: "rgb(10, 167, 218)",
   },
   bmMenuWrap: {
     position: "fixed",
     height: "100%",
+    // width: "100%",
   },
   bmMenu: {
     background: "rgb(10, 167, 218)",
     padding: "2.5em 1.5em 0",
     fontSize: "1.15em",
+    width: "244px",
   },
   bmMorphShape: {
     fill: "rgb(10, 167, 218)", // Синій колір для анімації
@@ -63,7 +65,7 @@ const BurgerMenu = () => {
       styles={styles}
       pageWrapId={"page-wrap"}
       outerContainerId={"outer-container"}
-      width={"20%"} // або '280px'
+      width={"360px"} // або '280px'
     >
       <Link to="/" className="menu-item" style={styles.bmItem}>
         Головна
