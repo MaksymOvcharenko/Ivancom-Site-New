@@ -1,0 +1,75 @@
+/* /src/components/Header/MobileMenu.module.css */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1200;
+}
+
+.mobileMenu {
+  width: 80%;
+  max-width: 300px;
+  background-color: #007bff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  z-index: 1300;
+}
+
+.closeButton {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.mobileMenuLinks {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.mobileMenuLinks li {
+  margin-bottom: 10px;
+}
+
+.mobileMenuLinks a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+}
+
+.mobileMenuSocLinks {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.mobileMenuSocLinks li {
+  margin: 0 10px;
+}
+
+.mobileMenuSocLinks a {
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.reactIcons {
+  color: white;
+  font-size: 24px;
+}
