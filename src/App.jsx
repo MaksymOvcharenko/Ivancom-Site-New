@@ -13,12 +13,14 @@ import BrandUa from "./components/BrandUa/BrandUa";
 import Promotions from "./components/Promotions/Promotions";
 import styles from "./App.module.css";
 
+import BurgerMenu from "./components/BrugerMenu/BurgerMenu";
+
 function App() {
   return (
-    <div className={styles.App}>
-      <Header />
-
-      <main>
+    <div className={styles.App} id="outer-container">
+      <BurgerMenu />
+      <main id="page-wrap">
+        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services/ua-pl" element={<UA_PL />} />
