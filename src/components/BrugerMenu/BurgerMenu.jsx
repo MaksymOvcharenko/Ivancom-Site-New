@@ -11,7 +11,7 @@ const styles = {
     top: "20px",
   },
   bmBurgerBars: {
-    background: "black", // Синій колір для бургер-іконки
+    background: "white", // Синій колір для бургер-іконки
   },
   bmCrossButton: {
     height: "24px",
