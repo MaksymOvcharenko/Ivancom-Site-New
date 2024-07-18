@@ -22,8 +22,72 @@ const MobileMenu = ({ onCloses }) => {
           <li>
             <Link to="/">Головна</Link>
           </li>
-          <li>
-            <Link to="/services">Послуги</Link>
+          <li className={styles.dropdown}>
+            <Link className={styles.accordion}>Послуги</Link>
+            <ul className={styles.submenu}>
+              <li className={styles.dropdowns}>
+                <Link to="/services/ua-pl" className={styles.accordion}>
+                  UA-PL
+                </Link>
+                <ul className={styles.subsubmenu}>
+                  <li>
+                    <Link to="/services/ua-pl/packages">Посилки</Link>
+                  </li>
+                  <li>
+                    <Link to="/services/ua-pl/medicines">Ліки</Link>
+                  </li>
+                  <li>
+                    <Link to="/services/ua-pl/animals">Тварини</Link>
+                  </li>
+                  <li>
+                    <Link to="/services/ua-pl/moving">Переїзди</Link>
+                  </li>
+                  <li>
+                    <Link to="/services/ua-pl/tires">Колеса та шини</Link>
+                  </li>
+                  <li>
+                    <Link to="/services/ua-pl/bikes">Велосипеди</Link>
+                  </li>
+                </ul>
+              </li>
+              <li className={styles.dropdown}>
+                <Link to="/services/pl-ua" className={styles.accordion}>
+                  PL-UA
+                </Link>
+                <ul className={styles.subsubmenu}>
+                  <li>
+                    <Link to="/services/pl-ua/packages">Посилки</Link>
+                  </li>
+                  <li>
+                    <Link to="/services/pl-ua/medicines">Ліки</Link>
+                  </li>
+                  <li>
+                    <Link to="/services/pl-ua/animals">Тварини</Link>
+                  </li>
+                  <li>
+                    <Link to="/services/pl-ua/moving">Переїзди</Link>
+                  </li>
+                  <li>
+                    <Link to="/services/pl-ua/tires">Колеса та шини</Link>
+                  </li>
+                  <li>
+                    <Link to="/services/pl-ua/bikes">Велосипеди</Link>
+                  </li>
+                </ul>
+              </li>
+              <li className={styles.dropdown}>
+                <Link to="/services/pl-pl" className={styles.accordion}>
+                  PL-PL
+                </Link>
+                <ul className={styles.subsubmenu}>
+                  <li>
+                    <Link to="/services/pl-pl/request">
+                      Звернутись за запитом
+                    </Link>
+                  </li>
+                </ul>
+              </li>
+            </ul>
           </li>
           <li>
             <Link to="/schedule">Розклад рейсів</Link>

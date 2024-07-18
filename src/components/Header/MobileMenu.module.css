@@ -77,3 +77,53 @@
   color: white;
   font-size: 24px;
 }
+.submenu {
+  display: none;
+}
+.dropdown:hover .submenu {
+  display: block;
+}
+.subsubmenu {
+  display: none;
+}
+.dropdowns:hover .subsubmenu {
+  display: block;
+}
+/* .nav .submenu {
+  display: none;
+  position: absolute;
+  background-color: var(--main-color);
+  top: 100%;
+  left: 0;
+  min-width: 140px;
+  z-index: 1000;
+}
+
+.nav .submenu li {
+  margin: 0;
+  && :hover {
+  }
+}
+
+.nav .submenu a {
+  padding: 10px;
+}
+
+.nav .submenu .dropdown:hover .subsubmenu {
+  display: block;
+  transition: color 1.5s ease;
+}
+
+.nav .subsubmenu {
+  display: none;
+  position: absolute;
+  background-color: var(--main-color);
+  top: 0;
+  left: 100%;
+  min-width: 200px;
+  z-index: 1000;
+}
+
+.nav .subsubmenu a {
+  padding: 10px;
+} */
