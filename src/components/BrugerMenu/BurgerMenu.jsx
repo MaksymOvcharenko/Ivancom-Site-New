@@ -1,116 +1,83 @@
-import { elastic as Menu } from "react-burger-menu";
+import { scaleDown as Menu } from "react-burger-menu";
 import { Link } from "react-router-dom";
 import { FaFacebook, FaInstagram, FaTiktok, FaLinkedin } from "react-icons/fa";
-
-const styles = {
-  bmBurgerButton: {
-    position: "fixed",
-    width: "36px",
-    height: "30px",
-    right: "20px",
-    top: "20px",
-  },
-  bmBurgerBars: {
-    background: "white", // Синій колір для бургер-іконки
-  },
-  bmCrossButton: {
-    height: "24px",
-    width: "24px",
-  },
-  bmCross: {
-    background: "rgb(10, 167, 218)",
-  },
-  bmMenuWrap: {
-    position: "fixed",
-    height: "100%",
-    // width: "100%",
-  },
-  bmMenu: {
-    background: "rgb(10, 167, 218)",
-    padding: "2.5em 1.5em 0",
-    fontSize: "1.15em",
-    width: "244px",
-  },
-  bmMorphShape: {
-    fill: "rgb(10, 167, 218)", // Синій колір для анімації
-  },
-  bmItemList: {
-    color: "#ffffff", // Білий колір тексту
-    padding: "0.8em",
-  },
-  bmItem: {
-    display: "block",
-    padding: "0.5em",
-    color: "#ffffff",
-    textDecoration: "none",
-  },
-  bmOverlay: {
-    background: "rgba(0, 0, 0, 0.3)",
-  },
-  socLinks: {
-    display: "flex",
-    justifyContent: "space-around",
-    marginTop: "2em",
-  },
-  socLink: {
-    color: "#ffffff",
-    fontSize: "1.5em",
-  },
-};
+import { IoMdClose } from "react-icons/io";
+import "./BurgerMenu.css";
 
 const BurgerMenu = () => {
   return (
     <Menu
       right
-      styles={styles}
       pageWrapId={"page-wrap"}
       outerContainerId={"outer-container"}
-      width={"360px"} // або '280px'
+      width={"240px"}
+      customCrossIcon={<IoMdClose className="bm-cross-icon" />}
+      crossButtonClassName={"bm-cross-icon"}
     >
-      <Link to="/" className="menu-item" style={styles.bmItem}>
+      <Link to="/" className="menu-item">
         Головна
       </Link>
-      <Link to="/services/ua-pl" className="menu-item" style={styles.bmItem}>
+      <Link to="/services/ua-pl" className="menu-item" id="open">
         UA-PL
+        <ul className="menu-item submenu">
+          <li>
+            <Link to="/services/ua-pl/packages">Посилки</Link>
+          </li>
+          <li>
+            <Link to="/services/ua-pl/medicines">Ліки</Link>
+          </li>
+          <li>
+            <Link to="/services/ua-pl/animals">Тварини</Link>
+          </li>
+          <li>
+            <Link to="/services/ua-pl/moving">Переїзди</Link>
+          </li>
+          <li>
+            <Link to="/services/ua-pl/tires">Колеса та шини</Link>
+          </li>
+          <li>
+            <Link to="/services/ua-pl/bikes">Велосипеди</Link>
+          </li>
+        </ul>
       </Link>
-      <Link to="/services/pl-ua" className="menu-item" style={styles.bmItem}>
+      <Link to="/services/pl-ua" className="menu-item">
         PL-UA
       </Link>
-      <Link to="/services/pl-pl" className="menu-item" style={styles.bmItem}>
+      <Link to="/services/pl-pl" className="menu-item">
         PL-PL
       </Link>
-      <Link to="/schedule" className="menu-item" style={styles.bmItem}>
+      <Link to="/schedule" className="menu-item">
         Розклад рейсів
       </Link>
-      <Link to="/for-companies" className="menu-item" style={styles.bmItem}>
+      <Link to="/for-companies" className="menu-item">
         Для фірм
       </Link>
-      <Link to="/about-us" className="menu-item" style={styles.bmItem}>
+      <Link to="/about-us" className="menu-item">
         Про Нас
       </Link>
-      <Link to="/faq" className="menu-item" style={styles.bmItem}>
+      <Link to="/faq" className="menu-item">
         Часті питання
       </Link>
-      <Link to="/contacts" className="menu-item" style={styles.bmItem}>
+      <Link to="/contacts" className="menu-item">
         Контакти
       </Link>
-      <Link to="/brandua" className="menu-item" style={styles.bmItem}>
+      <Link to="/brandua" className="menu-item">
         BrandUa
       </Link>
-      <Link to="/promotions" className="menu-item" style={styles.bmItem}>
+      <Link to="/promotions" className="menu-item">
         Акції
       </Link>
-      <div style={styles.socLinks}>
-        <Link to="/" style={styles.socLink}>
+      <div className="soc-links">
+        <Link to="/" className="soc-link">
           <FaFacebook />
         </Link>
-        <Link to="/" style={styles.socLink}>
+        <Link to="/" className="soc-link">
           <FaInstagram />
         </Link>
-        <Link to="/" style={styles.socLink}>
+        <Link to="/" className="soc-link">
           <FaTiktok />
         </Link>
-        <Link to="/" style={styles.socLink}>
+        <Link to="/" className="soc-link">
           <FaLinkedin />
         </Link>
       </div>
