@@ -36,7 +36,7 @@ function Header() {
       </button> */}
 
       <nav className={`${styles.nav} ${isMobileMenuOpen ? styles.open : ""}`}>
-        <ul>
+        {/* <ul>
           <li>
             <Link to="/">Головна</Link>
           </li>
@@ -128,7 +128,7 @@ function Header() {
           <li>
             <Link to="/promotions">Акції</Link>
           </li>
-        </ul>
+        </ul> */}
         <ul className={styles.socLink}>
           <li className={styles.socLinkItem}>
             <Link to="/">

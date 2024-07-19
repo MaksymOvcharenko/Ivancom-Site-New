@@ -80,7 +80,7 @@
 
 /* Individual item */
 .bm-item {
-  display: block;
+  text-align: left;
   padding: 0.5em;
   color: #ffffff;
   text-decoration: none;
@@ -107,8 +107,38 @@
   color: black;
 }
 .submenu {
-  display: none;
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+}
+.submenu.open {
+  max-height: 500px;
+  opacity: 1;
 }
 #open:hover .submenu {
-  display: block;
+}
+.header-submenu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.submenu {
+  font-size: 14px;
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 8px;
+  color: white !important;
+  text-align: left;
+  && a {
+    color: white;
+    text-decoration: none;
+    &&:hover {
+      color: black;
+    }
+  }
+}
+
+.submenu.open {
+  max-height: 500px; /* Достаточно большое значение, чтобы вместить все элементы */
+  opacity: 1;
 }
