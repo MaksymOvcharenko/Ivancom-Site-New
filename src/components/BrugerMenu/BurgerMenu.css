@@ -86,6 +86,10 @@
   padding: 0.5em;
   color: #ffffff;
   text-decoration: none;
+  display: flex !important;
+  gap: 10px;
+  justify-content: left;
+  align-items: center;
   &&:hover {
     border-bottom: 1px solid rgb(12, 12, 12);
   }
@@ -101,11 +105,19 @@
   gap: 12px;
   justify-content: start;
   margin-top: 2em;
+  &&:hover {
+    color: black;
+    border: none;
+  }
 }
 
 .soc-link {
   color: #ffffff;
   font-size: 1.5em;
+  &&:hover {
+    color: black;
+    border: none !important;
+  }
 }
 .menu-item:hover {
   text-decoration: none;
@@ -149,4 +161,8 @@
 .submenu.open {
   max-height: 500px; /* Достаточно большое значение, чтобы вместить все элементы */
   opacity: 1;
+}
+.menu-icon {
+  position: absolute;
+  left: 16px;
 }
