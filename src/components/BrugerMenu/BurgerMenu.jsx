@@ -182,21 +182,37 @@ const BurgerMenu = () => {
         Акції
       </Link>
       <div className="soc-links">
-        <Link to="/" className="soc-link">
+        <Link
+          to="https://www.facebook.com/ivancom.eu/"
+          className="soc-link"
+          target="blank"
+        >
           <FaFacebook />
         </Link>
-        <Link to="/" className="soc-link">
+        <Link
+          to="https://www.instagram.com/ivancom.poland/?igshid=NGVhN2U2NjQ0Yg%3D%3D"
+          className="soc-link"
+          target="blank"
+        >
           <FaInstagram />
         </Link>
-        <Link to="/" className="soc-link">
+        <Link
+          to="https://www.tiktok.com/@ivancom.poland?_t=8iCTrsyAonB"
+          className="soc-link"
+          target="blank"
+        >
           <FaTiktok />
         </Link>
-        <Link to="/" className="soc-link">
+        <Link
+          to="https://ru.linkedin.com/company/ivancom"
+          className="soc-link"
+          target="blank"
+        >
           <FaLinkedin />
         </Link>
       </div>
       <div className="chat-burger">
-        <Link to="/">
+        <Link to="https://t.me/IvancomTownBot">
           <IoChatboxEllipsesOutline size={"48px"} />
         </Link>
       </div>
