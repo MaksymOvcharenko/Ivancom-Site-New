@@ -32,7 +32,7 @@
 }
 
 .nav {
-  display: flex;
+  display: none;
   align-items: center;
   margin-right: 60px;
 }
@@ -111,13 +111,15 @@
   justify-content: center;
   align-items: center;
 }
-@media (max-width: 768px) {
+@media (min-width: 768px) {
+  .nav {
+    display: flex;
+  }
   .nav.open {
     max-height: 500px;
   }
 
   .nav ul {
-    flex-direction: column;
     width: 100%;
   }
 
