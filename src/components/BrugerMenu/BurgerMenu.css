@@ -1,4 +1,7 @@
 /* Position and sizing of burger button */
+* {
+  transition: all 0.1s ease; /* Плавный переход для всех свойств за 0.3 секунды */
+}
 .bm-burger-button {
   position: fixed;
   width: 24px;
@@ -89,7 +92,8 @@
   display: flex !important;
   gap: 10px;
   justify-content: left;
-  align-items: center;
+  transition: all 0.3s ease;
+
   &&:hover {
     border-bottom: 1px solid rgb(12, 12, 12);
   }
@@ -136,7 +140,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  &&:hover {
+    color: black;
+    border-bottom: 1px solid rgb(12, 12, 12);
+  }
 }
+
 .submenu {
   font-size: 14px;
   margin-top: 8px;
@@ -165,4 +174,55 @@
 .menu-icon {
   position: absolute;
   left: 16px;
+}
+#submenu-item {
+  display: flex;
+  flex-direction: column;
+}
+.submenu-item {
+  justify-content: start;
+  color: #ffffff;
+  &&:hover {
+    text-decoration: none;
+  }
+}
+.flags {
+  width: 16px;
+  height: 12px;
+}
+.chat-burger {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  &&:hover {
+    border: none;
+    color: black;
+  }
+  && a {
+    color: #ffffff;
+    &&:hover {
+      border: none;
+      color: black;
+    }
+  }
+}
+.policy-item {
+  /* position: absolute;
+  width: 140px;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0; */
+
+  font-size: 12px;
+  text-align: center;
+}
+.policy-burger {
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  /* position: relative; */
+
+  &&:hover {
+    border: none;
+  }
 }

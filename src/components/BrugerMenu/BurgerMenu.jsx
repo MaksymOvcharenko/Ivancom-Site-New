@@ -7,15 +7,17 @@ import {
   FaLinkedin,
   FaHome,
   FaQuestion,
+  FaTruck,
 } from "react-icons/fa";
 import { IoIosArrowDown, IoMdClose } from "react-icons/io";
 import "./BurgerMenu.css";
 import { useState } from "react";
 import { CiCalendarDate } from "react-icons/ci";
 import { PiBagSimpleDuotone } from "react-icons/pi";
-import { IoBookOutline } from "react-icons/io5";
+import { IoBookOutline, IoChatboxEllipsesOutline } from "react-icons/io5";
 import { MdContactPhone } from "react-icons/md";
 import { RiDiscountPercentLine } from "react-icons/ri";
+import { EU, PL, UA } from "country-flag-icons/react/1x1";
 
 const BurgerMenu = () => {
   const [isOpenUa, setIsOpenUa] = useState(false);
@@ -36,20 +38,21 @@ const BurgerMenu = () => {
         <FaHome size={"20px"} className="menu-icon" />
         Головна
       </Link>
-      <Link
-        to="/"
-        className="menu-item"
-        onClick={() => {
-          setisOpenUslugi((prev) => !prev);
-        }}
-      >
-        <FaHome size={"20px"} className="menu-icon" />
-        Послуги
+      <Link id="submenu-item" to="/" className="menu-item">
+        <FaTruck size={"20px"} className="menu-icon" />
+        <span
+          onClick={() => {
+            setisOpenUslugi((prev) => !prev);
+          }}
+        >
+          Послуги
+        </span>
+        {/* <IoIosArrowDown size={"24px"} /> */}
         {isOpenUslugi && (
           <>
             <Link
               to="/services/ua-pl"
-              className="menu-item"
+              className="submenu-item"
               id="open"
               onClick={() => {
                 setIsOpenUa((prev) => !prev);
@@ -58,8 +61,9 @@ const BurgerMenu = () => {
               }}
             >
               <div className="header-submenu">
-                <span>UA PL</span>
-                <IoIosArrowDown size={"24px"} />
+                <UA className="flags" />
+                <span>UA - EU</span>
+                <IoIosArrowDown />
               </div>
               {isOpenUa && (
                 <ul className="submenu">
@@ -86,7 +90,7 @@ const BurgerMenu = () => {
             </Link>
             <Link
               to="/services/pl-ua"
-              className="menu-item"
+              className="submenu-item"
               onClick={() => {
                 setIsOpenUa(false);
                 setIsOpenPl((prev) => !prev);
@@ -94,7 +98,8 @@ const BurgerMenu = () => {
               }}
             >
               <div className="header-submenu">
-                <span>PL UA</span>
+                <EU className="flags" />
+                <span>EU - UA</span>
                 <IoIosArrowDown />
               </div>
               {isOpenPl && (
@@ -122,7 +127,7 @@ const BurgerMenu = () => {
             </Link>
             <Link
               to="/services/pl-pl"
-              className="menu-item"
+              className="submenu-item"
               onClick={() => {
                 setIsOpenUa(false);
                 setIsOpenPl(false);
@@ -130,7 +135,8 @@ const BurgerMenu = () => {
               }}
             >
               <div className="header-submenu">
-                <span> PL PL</span>
+                <PL className="flags" />
+                <span> PL - PL</span>
                 <IoIosArrowDown />
               </div>
               {isOpenPltoPl && (
@@ -168,6 +174,7 @@ const BurgerMenu = () => {
         Контакти
       </Link>
       <Link to="/brandua" className="menu-item">
+        <UA className="menu-icon" height={"16px"} width={"20px"} />
         BrandUa
       </Link>
       <Link to="/promotions" className="menu-item">
@@ -188,105 +195,20 @@ const BurgerMenu = () => {
           <FaLinkedin />
         </Link>
       </div>
+      <div className="chat-burger">
+        <Link to="/">
+          <IoChatboxEllipsesOutline size={"48px"} />
+        </Link>
+      </div>
+      <div className="policy-burger">
+        <p className="policy-item">
+          © Всі права захищені.
+          <br /> NIP: 9452232009
+          <br /> ivancom.eu
+        </p>
+      </div>
     </Menu>
   );
 };
 
 export default BurgerMenu;
-
-{
-  /* <Link
-        to="/services/ua-pl"
-        className="menu-item"
-        id="open"
-        onClick={() => {
-          setIsOpenUa((prev) => !prev);
-          setIsOpenPl(false);
-          setIsOpenPltoPl(false);
-        }}
-      >
-        <div className="header-submenu">
-          <span>UA PL</span>
-          <IoIosArrowDown size={"24px"} />
-        </div>
-        {isOpenUa && (
-          <ul className="submenu">
-            <li>
-              <Link to="/services/ua-pl/packages">Посилки</Link>
-            </li>
-            <li>
-              <Link to="/services/ua-pl/medicines">Ліки</Link>
-            </li>
-            <li>
-              <Link to="/services/ua-pl/animals">Тварини</Link>
-            </li>
-            <li>
-              <Link to="/services/ua-pl/moving">Переїзди</Link>
-            </li>
-            <li>
-              <Link to="/services/ua-pl/tires">Колеса та шини</Link>
-            </li>
-            <li>
-              <Link to="/services/ua-pl/bikes">Велосипеди</Link>
-            </li>
-          </ul>
-        )}
-      </Link>
-      <Link
-        to="/services/pl-ua"
-        className="menu-item"
-        onClick={() => {
-          setIsOpenUa(false);
-          setIsOpenPl((prev) => !prev);
-          setIsOpenPltoPl(false);
-        }}
-      >
-        <div className="header-submenu">
-          <span>PL UA</span>
-          <IoIosArrowDown />
-        </div>
-        {isOpenPl && (
-          <ul className="submenu">
-            <li>
-              <Link to="/services/ua-pl/packages">Посилки</Link>
-            </li>
-            <li>
-              <Link to="/services/ua-pl/medicines">Ліки</Link>
-            </li>
-            <li>
-              <Link to="/services/ua-pl/animals">Тварини</Link>
-            </li>
-            <li>
-              <Link to="/services/ua-pl/moving">Переїзди</Link>
-            </li>
-            <li>
-              <Link to="/services/ua-pl/tires">Колеса та шини</Link>
-            </li>
-            <li>
-              <Link to="/services/ua-pl/bikes">Велосипеди</Link>
-            </li>
-          </ul>
-        )}
-      </Link>
-      <Link
-        to="/services/pl-pl"
-        className="menu-item"
-        onClick={() => {
-          setIsOpenUa(false);
-          setIsOpenPl(false);
-          setIsOpenPltoPl((prev) => !prev);
-        }}
-      >
-        <div className="header-submenu">
-          <span> PL PL</span>
-          <IoIosArrowDown />
-        </div>
-        {isOpenPltoPl && (
-          <ul className="submenu">
-            <li>
-              <Link to="/services/pl-pl/request">Звернутись за запитом</Link>
-            </li>
-          </ul>
-        )}
-      </Link> */
-}

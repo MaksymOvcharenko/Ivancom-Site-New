@@ -3,25 +3,18 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import styles from "./Header.module.css";
-import {
-  FaBars,
-  FaTimes,
-  FaFacebook,
-  FaInstagram,
-  FaLinkedin,
-  FaTiktok,
-} from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaLinkedin, FaTiktok } from "react-icons/fa";
 import Logo from "../Logo/Logo";
 // import MobileMenu from "./MobileMenu";
 function Header() {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  // const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
-  };
-  const closeMobileMenu = () => {
-    setIsMobileMenuOpen(false);
-  };
+  // const toggleMobileMenu = () => {
+  //   setIsMobileMenuOpen(!isMobileMenuOpen);
+  // };
+  // const closeMobileMenu = () => {
+  //   setIsMobileMenuOpen(false);
+  // };
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
@@ -152,7 +145,7 @@ function Header() {
           </li>
         </ul>
       </nav>
-      {isMobileMenuOpen && <MobileMenu onCloses={closeMobileMenu} />}
+      {/* {isMobileMenuOpen && <MobileMenu onCloses={closeMobileMenu} />} */}
     </header>
   );
 }
