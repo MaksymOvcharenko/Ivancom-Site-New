@@ -18,6 +18,7 @@ import { IoBookOutline, IoChatboxEllipsesOutline } from "react-icons/io5";
 import { MdContactPhone } from "react-icons/md";
 import { RiDiscountPercentLine } from "react-icons/ri";
 import { EU, PL, UA } from "country-flag-icons/react/1x1";
+import Logo from "../Logo/Logo";
 
 const BurgerMenu = () => {
   const [isOpenUa, setIsOpenUa] = useState(false);
@@ -30,21 +31,25 @@ const BurgerMenu = () => {
       right
       pageWrapId={"page-wrap"}
       outerContainerId={"outer-container"}
-      width={"240px"}
+      width={"280px"}
       customCrossIcon={<IoMdClose className="bm-cross-icon" />}
       crossButtonClassName={"bm-cross-icon"}
     >
+      <div className="burger-logo">
+        <Logo />
+      </div>
       <Link to="/" className="menu-item">
         <FaHome size={"20px"} className="menu-icon" />
         Головна
       </Link>
       <Link id="submenu-item" to="/" className="menu-item">
-        <FaTruck size={"20px"} className="menu-icon" />
         <span
           onClick={() => {
             setisOpenUslugi((prev) => !prev);
           }}
+          className="services-icon"
         >
+          <FaTruck size={"20px"} className="menu-icon" />
           Послуги
         </span>
         {/* <IoIosArrowDown size={"24px"} /> */}

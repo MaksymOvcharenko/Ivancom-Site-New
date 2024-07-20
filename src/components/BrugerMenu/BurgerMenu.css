@@ -66,7 +66,8 @@
   background: rgb(10, 167, 218);
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
-  width: 244px;
+  /* width: 244px; */
+  /* padding: 12px; */
 }
 
 /* Morph shape necessary with bubble or elastic */
@@ -79,7 +80,7 @@
   left: -50% !important;
   color: #ffffff;
   padding: 0.8em;
-  border-bottom: 1px solid rgb(102, 102, 102);
+
   font-size: 16px;
 }
 
@@ -106,8 +107,8 @@
 
 .soc-links {
   display: flex !important;
-  gap: 12px;
-  justify-content: start;
+
+  justify-content: space-between;
   margin-top: 2em;
   &&:hover {
     color: black;
@@ -172,8 +173,8 @@
   opacity: 1;
 }
 .menu-icon {
-  position: absolute;
-  left: 16px;
+  /* position: absolute;
+  left: 16px; */
 }
 #submenu-item {
   display: flex;
@@ -191,7 +192,7 @@
   height: 12px;
 }
 .chat-burger {
-  margin-top: 24px;
+  margin-top: 8px;
   display: flex;
   justify-content: center;
   &&:hover {
@@ -225,4 +226,15 @@
   &&:hover {
     border: none;
   }
+}
+.burger-logo {
+  display: flex;
+  justify-content: center;
+  &&:hover {
+    border: none;
+  }
+}
+.services-icon {
+  display: flex;
+  gap: 12px;
 }
