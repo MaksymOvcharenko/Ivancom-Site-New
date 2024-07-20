@@ -20,7 +20,9 @@
   }
 }
 .logo {
-  margin: left auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .logo a {
   color: white;
@@ -51,7 +53,6 @@
   color: white;
   text-decoration: none;
   padding: 5px 10px;
-  display: block;
 }
 
 .nav .dropdown:hover .submenu {
@@ -105,21 +106,12 @@
   font-size: 24px;
   cursor: pointer;
 }
-
+.linksoc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 @media (max-width: 768px) {
-  .nav {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background-color: #007bff;
-    flex-direction: column;
-    align-items: flex-start;
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.3s ease;
-  }
-
   .nav.open {
     max-height: 500px;
   }
@@ -141,5 +133,10 @@
 
   .mobileMenuButton {
     display: block;
+  }
+  .link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

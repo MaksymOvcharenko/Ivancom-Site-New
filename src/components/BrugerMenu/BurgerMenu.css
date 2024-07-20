@@ -7,7 +7,9 @@
   width: 24px;
   height: 24px;
   right: 24px;
-  top: 24px;
+  /* top: 24px; */
+  top: 34px;
+  transform: translateY(-50%);
 }
 
 /* Color/shape of burger icon bars */
@@ -48,11 +50,13 @@
   fill: white;
   &&:hover {
     transform: rotate(90deg);
+    fill: black !important;
   }
 }
 
 .bm-cross-icon:hover {
   transform: rotate(90deg);
+  fill: black !important;
 }
 
 /* Sidebar wrapper styles */
