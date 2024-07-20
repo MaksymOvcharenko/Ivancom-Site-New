@@ -1,8 +1,50 @@
 .home {
-  height: 100vh;
 }
-iframe {
-  width: 100%;
-  height: 100vh;
-  border: none; /* Прибрати рамку */
+.home {
+  padding: 20px;
+  color: white;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./bgimagehome.png");
+  background-size: cover; /* Или contain, если нужно вписать изображение в контейнер */
+  background-repeat: no-repeat; /* Чтобы изображение не повторялось */
+  background-position: center; /* Центрирование изображения */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.description {
+  font-size: 48px;
+  text-align: center;
+}
+.title {
+  font-size: 32px;
+  text-align: center;
+  margin-top: 120px;
+  line-height: 1.6;
+  font-weight: 600;
+}
+.iconplace {
+  display: flex;
+}
+.icon {
+  animation: shake 0.5s infinite;
+}
+@keyframes shake {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+/* Медиазапрос для экранов шириной от 768px до 1279px */
+@media (min-width: 768px) and (max-width: 1279px) {
+}
+
+/* Медиазапрос для экранов шириной 1280px и более */
+@media (min-width: 1280px) {
 }
