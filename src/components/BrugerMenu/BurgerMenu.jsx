@@ -158,7 +158,7 @@ const BurgerMenu = () => {
         )}
       </Link>
 
-      <Link to="/schedule" className="menu-item">
+      <Link to="/#schedule" className="menu-item">
         <CiCalendarDate size={"20px"} className="menu-icon" />
         Розклад рейсів
       </Link>

@@ -38,7 +38,7 @@
 .bm-cross {
   top: 24px;
   right: 24px;
-  background: rgb(10, 167, 218);
+  background: var(--main-color2);
 }
 
 .bm-cross-icon {
@@ -62,12 +62,12 @@
 /* Sidebar wrapper styles */
 .bm-menu-wrap {
   position: fixed;
-  height: 100%;
+  height: 100vh !important;
 }
 
 /* General sidebar styles */
 .bm-menu {
-  background: rgb(10, 167, 218);
+  background: var(--main-color2);
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
   /* width: 244px; */
@@ -76,9 +76,8 @@
 
 /* Morph shape necessary with bubble or elastic */
 .bm-morph-shape {
-  fill: rgb(10, 167, 218);
+  fill: var(--main-color2);
 }
-
 /* Wrapper for item list */
 .bm-item-list {
   left: -50% !important;

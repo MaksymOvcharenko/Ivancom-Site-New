@@ -6,10 +6,12 @@
 }
 
 .header {
+  position: fixed;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: var(--main-color);
+  background-color: var(--main-color2);
   padding: 10px 20px;
   color: white;
 
@@ -62,7 +64,7 @@
 .nav .submenu {
   display: none;
   position: absolute;
-  background-color: var(--main-color);
+  background-color: var(--main-color2);
   top: 100%;
   left: 0;
   min-width: 140px;
@@ -87,7 +89,7 @@
 .nav .subsubmenu {
   display: none;
   position: absolute;
-  background-color: var(--main-color);
+  background-color: var(--main-color2);
   top: 0;
   left: 100%;
   min-width: 200px;

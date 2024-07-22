@@ -1,6 +1,7 @@
 .home {
 }
 .home {
+  height: 100vh;
   padding: 20px;
   color: white;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -12,8 +13,10 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  margin: 0 auto;
 }
 .description {
+  margin-top: 52px;
   font-size: 48px;
   text-align: center;
 }
@@ -30,6 +33,76 @@
 .icon {
   animation: shake 0.5s infinite;
 }
+.body {
+  padding: 60px 20px;
+  margin: 0 auto;
+  text-align: center;
+}
+.bodytitle {
+  font-size: 24px;
+  color: var(--black);
+  font-weight: 600;
+  margin: 24px 0;
+}
+.bodydescr {
+  font-size: 16px;
+  margin: 24px 0;
+}
+.blue {
+  color: var(--main-color);
+}
+.yellow {
+  color: var(--yellow);
+}
+.servicecont {
+  display: flex;
+  flex-direction: column;
+
+  gap: 24px;
+}
+.schedule {
+  padding: 60px 20px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+}
+.schedtitle {
+  font-size: 24px;
+  color: var(--black);
+  font-weight: 600;
+  text-align: center;
+}
+.schedcont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 24px;
+}
+.schedimg img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+.schedimg,
+.schedtext {
+  flex: 1;
+}
+.black {
+  color: var(--black);
+  font-weight: 600;
+}
+.schedtext a {
+  text-decoration: underline;
+  color: var(--black);
+  font-weight: 600;
+  &&:hover {
+    transform: scale(1.1);
+  }
+}
 @keyframes shake {
   0% {
     transform: translateY(0);
@@ -43,8 +116,75 @@
 }
 /* Медиазапрос для экранов шириной от 768px до 1279px */
 @media (min-width: 768px) and (max-width: 1279px) {
+  .body {
+    padding: 60px 40px;
+  }
+  .schedule {
+    padding: 60px 120px;
+    margin: 0 auto;
+  }
+  .bodytitle {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  .bodydescr {
+    font-size: 20px;
+    margin-bottom: 60px;
+  }
+  .schedcont {
+    flex-direction: row;
+    gap: 40px;
+    max-width: 600px;
+  }
+  .schedimg,
+  .schedtext {
+    flex: 1;
+  }
+  .schedimg img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
 }
 
 /* Медиазапрос для экранов шириной 1280px и более */
 @media (min-width: 1280px) {
+  .servicecont {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    justify-content: space-between;
+  }
+  .body {
+    padding: 60px 120px;
+  }
+  .schedule {
+    padding: 60px 120px;
+    margin: 0 auto;
+  }
+  .bodytitle {
+    font-size: 48px;
+    margin-bottom: 40px;
+  }
+  .bodydescr {
+    font-size: 24px;
+    margin-bottom: 100px;
+  }
+  .schedcont {
+    flex-direction: row;
+    gap: 60px;
+    padding: 40px 160px;
+  }
+  .schedtitle {
+    font-size: 40px;
+  }
+  .schedtext {
+    font-size: 20px;
+  }
+  .schedimg img {
+    width: 100%;
+
+    height: auto;
+    transition: transform 0.3s ease;
+  }
 }

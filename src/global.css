@@ -1,17 +1,21 @@
 /* /src/global.css */
 @import "modern-normalize";
 :root {
-  :root {
-    --main-color: rgb(10, 167, 218);
-    --font-size: 16px;
-  }
+  --main-color: rgb(10, 167, 218);
+  --font-size: 16px;
+  --yellow: #ffc907;
+  --main-color2: #0084d5;
+  --textgrey: #63666a;
+  --black: #111111;
 }
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
+  background-color: #ffffff;
+  color: #63666a;
   line-height: 1.6;
   height: 100vh;
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
 }
 
 a {
@@ -20,11 +24,11 @@ a {
 }
 
 a:hover {
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 
 header {
-  background-color: var(--main-color);
+  background-color: var(--main-color2);
   color: white;
 }
 
@@ -36,7 +40,7 @@ header a:hover {
   text-decoration: none;
 }
 #page-wrap {
-  height: 100vh;
+  height: 90vh;
 }
 #root {
   height: 100vh;
