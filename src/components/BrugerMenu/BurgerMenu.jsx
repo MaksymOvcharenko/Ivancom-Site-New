@@ -170,7 +170,7 @@ const BurgerMenu = () => {
         <IoBookOutline size={"20px"} className="menu-icon" />
         Про Нас
       </Link>
-      <Link to="/faq" className="menu-item">
+      <Link to="/#faq" className="menu-item">
         <FaQuestion size={"20px"} className="menu-icon" />
         Часті питання
       </Link>

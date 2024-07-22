@@ -5,13 +5,18 @@ import s from "./Home.module.css";
 import ServiceHero from "../ServiceHero/ServiceHero";
 import scheduleimg from "../img/scheduleJuly2024.png";
 import { useEffect, useRef } from "react";
+import FAQs from "../FAQ/FAQs";
 
 function Home() {
   const sectionRef = useRef(null);
   const scheduleRef = useRef(null);
+  const faqRef = useRef(null);
   useEffect(() => {
     if (location.hash === "#schedule" && scheduleRef.current) {
       scheduleRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (location.hash === "#faq" && faqRef.current) {
+      faqRef.current.scrollIntoView({ behavior: "smooth" });
     }
   }, [location.hash]);
 
@@ -121,6 +126,9 @@ function Home() {
             </a>
           </div>
         </div>
+      </div>
+      <div className={s.faq} ref={faqRef} id="faq">
+        <FAQs />
       </div>
     </div>
   );

@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@szhsin/react-accordion": "^1.2.4",
     "country-flag-icons": "^1.5.13",
     "formik": "^2.4.6",
     "modern-normalize": "^2.0.0",

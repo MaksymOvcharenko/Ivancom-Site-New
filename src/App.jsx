@@ -7,7 +7,7 @@ import PL_PL from "./components/Services/PL_PL/PL_PL";
 import Schedule from "./components/Schedule/Schedule";
 import ForCompanies from "./components/ForCompanies/ForCompanies";
 import AboutUs from "./components/AboutUs/AboutUs";
-import FAQ from "./components/FAQ/FAQ";
+import FAQs from "./components/FAQ/FAQs";
 import Contacts from "./components/Contacts/Contacts";
 import BrandUa from "./components/BrandUa/BrandUa";
 import Promotions from "./components/Promotions/Promotions";
@@ -26,10 +26,10 @@ function App() {
           <Route path="/services/ua-pl" element={<UA_PL />} />
           <Route path="/services/pl-ua" element={<PL_UA />} />
           <Route path="/services/pl-pl" element={<PL_PL />} />
-          <Route path="/schedule" element={<Schedule />} />
+          <Route path="/#schedule" element={<Schedule />} />
           <Route path="/for-companies" element={<ForCompanies />} />
           <Route path="/about-us" element={<AboutUs />} />
-          <Route path="/faq" element={<FAQ />} />
+          <Route path="/#faq" element={<FAQs />} />
           <Route path="/contacts" element={<Contacts />} />
           <Route path="/brandua" element={<BrandUa />} />
           <Route path="/promotions" element={<Promotions />} />
