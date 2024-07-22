@@ -1,3 +1,138 @@
+/* .faq {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 24px 40px;
+  background: #d8f6ff;
+  flex-direction: column;
+  align-items: center;
+}
+
+.headeracc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--black);
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  padding: 12px;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.headeracc:hover {
+  background-color: #f0f0f0;
+}
+
+.icon {
+  transition: transform 0.3s ease;
+  transform: rotate(45deg);
+  overflow: hidden;
+  z-index: 5;
+  margin-left: 8px;
+  margin-right: 16px;
+}
+
+.rotate {
+  transform: rotate(0deg);
+}
+
+.accitem {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.titleacc {
+  max-width: calc(100% - 48px);
+  text-align: left;
+  margin: 0;
+  font-size: 16px;
+}
+
+.acc {
+  max-width: 780px;
+  width: 100%;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.acc button {
+  all: unset;
+  display: block;
+  cursor: pointer;
+  background-color: white;
+  padding: 16px;
+  width: 100%;
+  text-align: left;
+  font: inherit;
+  transition: background-color 0.3s ease;
+}
+
+.acc button:hover {
+  background-color: #f0f0f0;
+}
+
+.accdesc {
+  background: white;
+  width: 100%;
+  padding: 16px;
+  text-align: left;
+  line-height: 1.5;
+  font-size: 14px;
+  transition: height 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .faq {
+    padding: 16px 20px;
+  }
+
+  .headeracc {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .icon {
+    font-size: 24px;
+  }
+
+  .titleacc {
+    font-size: 14px;
+  }
+
+  .accdesc {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .faq {
+    padding: 12px 16px;
+  }
+
+  .headeracc {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .icon {
+    font-size: 20px;
+  }
+
+  .titleacc {
+    font-size: 12px;
+  }
+
+  .accdesc {
+    font-size: 12px;
+  }
+} */
 .faq {
   display: flex;
   justify-content: center;
@@ -86,6 +221,21 @@
   line-height: 1.5;
   font-size: 14px;
   transition: height 0.3s ease;
+}
+
+/* Стили для списков и заголовков внутри аккордеона */
+.accdesc ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin: 0;
+}
+
+.accdesc li {
+  margin-bottom: 8px;
+}
+
+.accdesc p {
+  margin-bottom: 16px;
 }
 
 @media (max-width: 768px) {
