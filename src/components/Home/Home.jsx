@@ -79,7 +79,7 @@ function Home() {
           </ServiceHero>
         </div>
       </div>
-      <div className={s.schedule} ref={scheduleRef} id="schedule">
+      <section className={s.schedule} ref={scheduleRef} id="schedule">
         <h2 className={s.schedtitle}>
           Розклад рейсів з/до головного складу в Польщі:
         </h2>
@@ -126,7 +126,7 @@ function Home() {
             </a>
           </div>
         </div>
-      </div>
+      </section>
       <div className={s.faq} ref={faqRef} id="faq">
         <FAQs />
       </div>

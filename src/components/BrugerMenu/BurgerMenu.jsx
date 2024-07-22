@@ -11,7 +11,7 @@ import {
 } from "react-icons/fa";
 import { IoIosArrowDown, IoMdClose } from "react-icons/io";
 import "./BurgerMenu.css";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { CiCalendarDate } from "react-icons/ci";
 import { PiBagSimpleDuotone } from "react-icons/pi";
 import { IoBookOutline, IoChatboxEllipsesOutline } from "react-icons/io5";
@@ -25,9 +25,21 @@ const BurgerMenu = () => {
   const [isOpenUslugi, setIsOpenUslugi] = useState(false);
   const menuRef = useRef(null);
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [isOpen]);
+
   const handleLinkClick = () => {
-    setIsOpen(false); // Закрыть меню
-    setIsOpenUslugi(false); // Скрыть подменю
+    setIsOpen(false);
+    setIsOpenUslugi(false);
   };
 
   const handleStateChange = ({ isOpen }) => {
