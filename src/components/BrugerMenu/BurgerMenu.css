@@ -2,6 +2,25 @@
 * {
   transition: all 0.1s ease; /* Плавный переход для всех свойств за 0.3 секунды */
 }
+/* BurgerMenu.css */
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+#page-wrap.no-scroll {
+  overflow: hidden;
+}
+
+.bm-menu {
+  /* другие стили */
+  overflow: hidden; /* Убедитесь, что меню не прокручивается */
+}
+
+.bm-menu-wrap {
+  overflow: hidden; /* Убедитесь, что обертка меню не прокручивается */
+}
+
 .bm-burger-button {
   position: fixed;
   width: 24px;

@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 // import { Accordion, AccordionItem } from "@szhsin/react-accordion";
 // import s from "./FAQ.module.css";
 // import { IoCloseOutline } from "react-icons/io5";
