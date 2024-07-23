@@ -6,6 +6,8 @@ import ServiceHero from "../ServiceHero/ServiceHero";
 import scheduleimg from "../img/scheduleJuly2024.png";
 import { useEffect, useRef } from "react";
 import FAQs from "../FAQ/FAQs";
+import Partners from "../Partners/Partners";
+import OurTeam from "../OurTeam/OurTeam";
 
 function Home() {
   const sectionRef = useRef(null);
@@ -129,6 +131,12 @@ function Home() {
       </section>
       <div className={s.faq} ref={faqRef} id="faq">
         <FAQs />
+      </div>
+      <div>
+        <Partners />
+      </div>
+      <div>
+        <OurTeam />
       </div>
     </div>
   );

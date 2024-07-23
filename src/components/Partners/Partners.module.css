@@ -1,0 +1,78 @@
+.partnersContainer {
+  background-color: white;
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: var(--black);
+}
+.description {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: var(--textgrey);
+}
+.gridContainer {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
+.partnerItem {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.partnerItem:last-child {
+  border-bottom: none;
+}
+
+.partnerLogo {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+@media (min-width: 769px) {
+  .partnersContainer {
+    padding: 120px 32px;
+  }
+  .title {
+    font-size: 24px;
+  }
+  .description {
+    font-size: 18px;
+  }
+  .gridContainer {
+    margin-top: 120px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .partnerItem {
+    width: 300px;
+    height: 200px;
+    border: none;
+  }
+
+  .partnerItem:nth-child(n + 5) {
+    border-top: 1px solid #e0e0e0;
+  }
+
+  .partnerItem:nth-child(4n + 2),
+  .partnerItem:nth-child(4n + 3),
+  .partnerItem:nth-child(4n + 4) {
+    border-left: 1px solid #e0e0e0;
+  }
+}
