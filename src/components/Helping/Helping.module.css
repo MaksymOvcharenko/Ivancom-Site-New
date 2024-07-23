@@ -1,0 +1,136 @@
+.bg {
+  background-color: #eefbff; /* Цвет фона */
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: var(--black);
+  margin-bottom: 40px;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.image {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 5px;
+}
+
+.text {
+  max-width: 600px;
+}
+
+.text p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+.textfull {
+  font-size: 14px;
+  line-height: 1.5;
+}
+.text ul {
+  margin-bottom: 10px;
+}
+
+.text ul li {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.text strong {
+  font-weight: bold;
+  color: #333;
+}
+.containertruck {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.heading {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.descriptiontruck {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  padding: 40px;
+}
+
+.videoContainertruck {
+  max-width: 100%;
+  position: relative;
+
+  overflow: hidden;
+  background: #000;
+}
+.videoContainertruck iframe {
+}
+
+@media (min-width: 768px) {
+  .content {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .text {
+    max-width: 60%;
+  }
+
+  .image {
+    max-width: 40%;
+    margin-left: 20px;
+  }
+  .heading {
+    font-size: 2rem;
+  }
+
+  .descriptiontruck {
+    font-size: 1.25rem;
+  }
+  .videoContainertruck iframe {
+    width: 560px;
+    height: 320px;
+  }
+  .containertruck {
+    padding: 120px 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .text {
+    max-width: 60%;
+  }
+
+  .image {
+    max-width: 40%;
+  }
+  .videoContainertruck iframe {
+    width: 760px;
+    height: 480px;
+  }
+}
+/* HeadingComponent.module.css */

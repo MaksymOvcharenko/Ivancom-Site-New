@@ -8,6 +8,7 @@ import { useEffect, useRef } from "react";
 import FAQs from "../FAQ/FAQs";
 import Partners from "../Partners/Partners";
 import OurTeam from "../OurTeam/OurTeam";
+import Helping from "../Helping/Helping";
 
 function Home() {
   const sectionRef = useRef(null);
@@ -137,6 +138,9 @@ function Home() {
       </div>
       <div>
         <OurTeam />
+      </div>
+      <div>
+        <Helping />
       </div>
     </div>
   );
