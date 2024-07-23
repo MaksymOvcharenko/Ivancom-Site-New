@@ -1,4 +1,5 @@
 import s from "./Helping.module.css";
+import HelpingGallery from "./HelpingGallery/HelpingGallery";
 import helping from "./helping.jpg";
 
 const Helping = () => {
@@ -105,6 +106,10 @@ const Helping = () => {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             ></iframe>
+          </div>
+          <div className={s.gallery}>
+            {" "}
+            <HelpingGallery />
           </div>
         </div>
       </div>

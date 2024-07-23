@@ -89,6 +89,9 @@
 }
 .videoContainertruck iframe {
 }
+.gallery {
+  padding: 60px 20px;
+}
 
 @media (min-width: 768px) {
   .content {

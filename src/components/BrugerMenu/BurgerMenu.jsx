@@ -17,7 +17,7 @@ import { PiBagSimpleDuotone } from "react-icons/pi";
 import { IoBookOutline, IoChatboxEllipsesOutline } from "react-icons/io5";
 import { MdContactPhone } from "react-icons/md";
 import { RiDiscountPercentLine } from "react-icons/ri";
-import { EU, PL, UA } from "country-flag-icons/react/1x1";
+import { UA } from "country-flag-icons/react/1x1";
 import Logo from "../Logo/Logo";
 
 const BurgerMenu = () => {
@@ -71,7 +71,7 @@ const BurgerMenu = () => {
       >
         <FaTruck size={"20px"} className="menu-icon" />
         Послуги
-        <IoIosArrowDown />
+        {/* <IoIosArrowDown /> */}
       </span>
       {isOpenUslugi && (
         <>
@@ -81,7 +81,6 @@ const BurgerMenu = () => {
             onClick={handleLinkClick}
           >
             <div className="header-submenu">
-              <UA className="flags" />
               <span>UA - EU</span>
               <IoIosArrowDown />
             </div>
@@ -124,7 +123,6 @@ const BurgerMenu = () => {
             onClick={handleLinkClick}
           >
             <div className="header-submenu">
-              <EU className="flags" />
               <span>EU - UA</span>
               <IoIosArrowDown />
             </div>
@@ -167,7 +165,6 @@ const BurgerMenu = () => {
             onClick={handleLinkClick}
           >
             <div className="header-submenu">
-              <PL className="flags" />
               <span>PL - PL</span>
               <IoIosArrowDown />
             </div>
