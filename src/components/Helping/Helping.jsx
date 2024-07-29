@@ -91,9 +91,9 @@ const Helping = () => {
       </div>
       <div className={s.truck}>
         <div className={s.containertruck}>
-          <h1 className={s.heading}>
+          <h2 className={s.heading}>
             Везли хірургічний причеп та позашляховик на Запорізький напрямок
-          </h1>
+          </h2>
           <p className={s.descriptiontruck}>
             Наші друзі з усього світу допомагали в цьому та зняли невеличкий
             фільм.
@@ -107,12 +107,10 @@ const Helping = () => {
               allowFullScreen
             ></iframe>
           </div>
-          <div className={s.gallery}>
-            {" "}
-            <HelpingGallery />
-          </div>
+          <div className={s.gallery}></div>
         </div>
       </div>
+      <HelpingGallery />
     </>
   );
 };

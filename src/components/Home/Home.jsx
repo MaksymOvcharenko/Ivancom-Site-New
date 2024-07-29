@@ -9,11 +9,15 @@ import FAQs from "../FAQ/FAQs";
 import Partners from "../Partners/Partners";
 import OurTeam from "../OurTeam/OurTeam";
 import Helping from "../Helping/Helping";
+import { useLocation } from "react-router-dom";
 
 function Home() {
   const sectionRef = useRef(null);
-  const scheduleRef = useRef(null);
   const faqRef = useRef(null);
+  const scheduleRef = useRef(null);
+  const mainRef = useRef(null);
+  const location = useLocation();
+
   useEffect(() => {
     if (location.hash === "#schedule" && scheduleRef.current) {
       scheduleRef.current.scrollIntoView({ behavior: "smooth" });
@@ -21,13 +25,16 @@ function Home() {
     if (location.hash === "#faq" && faqRef.current) {
       faqRef.current.scrollIntoView({ behavior: "smooth" });
     }
+    if (location.hash === "" && mainRef.current) {
+      mainRef.current.scrollIntoView({ behavior: "smooth" });
+    }
   }, [location.hash]);
 
   const scrollToSection = () => {
     sectionRef.current.scrollIntoView({ behavior: "smooth" });
   };
   return (
-    <div className={s.header} id="page-wrap">
+    <div className={s.header} ref={mainRef}>
       <div className={s.home}>
         <p className={s.description}>IVANCOM</p>
         <h1 className={s.title}>

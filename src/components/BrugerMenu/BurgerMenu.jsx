@@ -1,4 +1,4 @@
-import { scaleDown as Menu } from "react-burger-menu";
+import { slide as Menu } from "react-burger-menu";
 import { Link } from "react-router-dom";
 import {
   FaFacebook,
@@ -51,7 +51,7 @@ const BurgerMenu = () => {
       right
       pageWrapId={"page-wrap"}
       outerContainerId={"outer-container"}
-      width={"280px"}
+      // width={"280px"}
       customCrossIcon={<IoMdClose className="bm-cross-icon" />}
       crossButtonClassName={"bm-cross-icon"}
       isOpen={isOpen}

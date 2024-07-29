@@ -18,6 +18,11 @@ body.no-scroll {
 }
 
 .bm-menu-wrap {
+  position: fixed !important;
+  /* top: 0;
+  left: 0; */
+  height: 100% !important;
+  z-index: 1000; /* Убедитесь, что z-index достаточно высок */
   overflow: hidden; /* Убедитесь, что обертка меню не прокручивается */
 }
 
