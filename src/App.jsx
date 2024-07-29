@@ -23,6 +23,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/services/" element={<h2>Service</h2>} />
           <Route path="/services/ua-pl" element={<UA_PL />} />
           <Route path="/services/pl-ua" element={<PL_UA />} />
           <Route path="/services/pl-pl" element={<PL_PL />} />

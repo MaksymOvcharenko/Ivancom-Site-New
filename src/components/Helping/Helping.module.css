@@ -95,6 +95,10 @@
 }
 
 @media (min-width: 768px) {
+  .textfull {
+    font-size: 14px !important;
+    line-height: 1.5;
+  }
   .content {
     flex-direction: row;
     align-items: flex-start;
@@ -124,7 +128,13 @@
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
+  .textfull {
+    && p {
+      font-size: 14px !important;
+      line-height: 1.5 !important;
+    }
+  }
   .text {
     max-width: 60%;
   }

@@ -19,8 +19,7 @@ body.no-scroll {
 
 .bm-menu-wrap {
   position: fixed !important;
-  /* top: 0;
-  left: 0; */
+
   height: 100% !important;
   z-index: 1000; /* Убедитесь, что z-index достаточно высок */
   overflow: hidden; /* Убедитесь, что обертка меню не прокручивается */
@@ -31,22 +30,19 @@ body.no-scroll {
   width: 24px;
   height: 24px;
   right: 24px;
-  /* top: 24px; */
+
   top: 34px;
   transform: translateY(-50%);
 }
 
-/* Color/shape of burger icon bars */
 .bm-burger-bars {
   background: white;
 }
 
-/* Color/shape of burger icon bars on hover */
 .bm-burger-bars-hover {
   background: #a90000;
 }
 
-/* Position and sizing of clickable cross button */
 .bm-cross-button {
   top: px;
   right: 24px;
@@ -58,7 +54,6 @@ body.no-scroll {
   }
 }
 
-/* Color/shape of close button cross */
 .bm-cross {
   top: 24px;
   right: 24px;
@@ -74,13 +69,13 @@ body.no-scroll {
   fill: white;
   &&:hover {
     transform: rotate(90deg);
-    fill: black !important;
+    fill: #01426b !important;
   }
 }
 
 .bm-cross-icon:hover {
   transform: rotate(90deg);
-  fill: black !important;
+  fill: #01426b !important;
 }
 
 /* Sidebar wrapper styles */
@@ -94,8 +89,6 @@ body.no-scroll {
   background: var(--main-color2);
   padding: 2.5em 1.5em 0;
   font-size: 1.15em;
-  /* width: 244px; */
-  /* padding: 12px; */
 }
 
 /* Morph shape necessary with bubble or elastic */
@@ -104,9 +97,10 @@ body.no-scroll {
 }
 /* Wrapper for item list */
 .bm-item-list {
+  margin-top: 36px;
   left: -50% !important;
   color: #ffffff;
-  padding: 0.8em;
+  /* padding: 0.8em; */
 
   font-size: 16px;
 }
@@ -129,7 +123,7 @@ body.no-scroll {
 
 /* Styling of overlay */
 .bm-overlay {
-  background: rgba(0, 0, 0, 0.3);
+  background: #01426b;
 }
 
 .soc-links {
@@ -138,7 +132,7 @@ body.no-scroll {
   justify-content: space-between;
   margin-top: 2em;
   &&:hover {
-    color: black;
+    color: #01426b;
     border: none;
   }
 }
@@ -147,13 +141,17 @@ body.no-scroll {
   color: #ffffff;
   font-size: 1.5em;
   &&:hover {
-    color: black;
+    color: #01426b;
     border: none !important;
   }
 }
+.menu-item {
+  display: flex;
+  align-items: center;
+}
 .menu-item:hover {
   text-decoration: none;
-  color: black;
+  color: #01426b;
 }
 .submenu {
   transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
@@ -167,30 +165,52 @@ body.no-scroll {
 .header-submenu {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  &&:hover {
-    color: black;
-    border-bottom: 1px solid rgb(12, 12, 12);
+  justify-content: start;
+  padding-left: 25%;
+  && a {
+    text-decoration: solid !important;
+  }
+  && span {
+    &&:hover {
+      color: #01426b;
+
+      border-bottom: 1px solid #01426b;
+    }
   }
 }
 
 .submenu {
+  padding-left: 25%;
   font-size: 14px;
   margin-top: 8px;
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: center;
+  align-items: start;
+  list-style-type: unset;
   gap: 8px;
-  color: white !important;
+  color: white;
   text-align: left;
+  margin-bottom: 24px;
+
+  && li {
+    &&:hover {
+      color: 0#01426B;
+    }
+  }
+
   && a {
     color: white;
-    text-decoration: none;
+
     &&:hover {
-      color: black;
-      &&:hover {
-        border-bottom: 1px solid rgb(12, 12, 12);
+      color: #01426b;
+      &&::marker {
+        color: #01426b;
       }
+      color: #01426b;
+      /* &&:hover {
+        border-bottom: 1px solid rgb(12, 12, 12);
+      } */
     }
   }
 }
@@ -202,6 +222,11 @@ body.no-scroll {
 .menu-icon {
   /* position: absolute;
   left: 16px; */
+  && svg {
+    &&:hover {
+      fill: #01426b;
+    }
+  }
 }
 #submenu-item {
   display: flex;
@@ -219,19 +244,23 @@ body.no-scroll {
   height: 12px;
 }
 .chat-burger {
-  margin-top: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 15px;
+  && div {
+    justify-content: center !important;
+    display: flex;
+  }
+  && p {
+    font-size: 12px !important;
+    color: #ffffff;
+  }
+}
+.chat-cont {
   display: flex;
   justify-content: center;
-  &&:hover {
-    border: none;
-    color: black;
-  }
   && a {
-    color: #ffffff;
-    &&:hover {
-      border: none;
-      color: black;
-    }
+    display: flex;
+    justify-content: center;
   }
 }
 .policy-item {
@@ -255,8 +284,9 @@ body.no-scroll {
   }
 }
 .burger-logo {
-  display: flex;
-  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 24px;
   &&:hover {
     border: none;
   }

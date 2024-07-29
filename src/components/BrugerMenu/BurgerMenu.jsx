@@ -5,20 +5,29 @@ import {
   FaInstagram,
   FaTiktok,
   FaLinkedin,
-  FaHome,
-  FaQuestion,
-  FaTruck,
+  FaQuestionCircle,
+  FaUserPlus,
 } from "react-icons/fa";
+import { FaTruck } from "react-icons/fa6";
 import { IoIosArrowDown, IoMdClose } from "react-icons/io";
 import "./BurgerMenu.css";
 import { useState, useRef, useEffect } from "react";
 import { CiCalendarDate } from "react-icons/ci";
 import { PiBagSimpleDuotone } from "react-icons/pi";
-import { IoBookOutline, IoChatboxEllipsesOutline } from "react-icons/io5";
+import {
+  IoBookOutline,
+  IoCalendarNumber,
+  IoChatboxEllipsesOutline,
+} from "react-icons/io5";
 import { MdContactPhone } from "react-icons/md";
-import { RiDiscountPercentLine } from "react-icons/ri";
-import { UA } from "country-flag-icons/react/1x1";
+import { RiDiscountPercentFill, RiDiscountPercentLine } from "react-icons/ri";
+
 import Logo from "../Logo/Logo";
+import { BiSolidHome } from "react-icons/bi";
+import { BsBriefcaseFill } from "react-icons/bs";
+import { HiBuildingOffice } from "react-icons/hi2";
+import uaIcon from "../../img/schedule/svg/Mask groupua.svg";
+import consIcon from "../../img/schedule/svg/Mask groupconsul.svg";
 
 const BurgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -62,17 +71,18 @@ const BurgerMenu = () => {
         <Logo />
       </div>
       <Link to="/" className="menu-item" onClick={handleLinkClick}>
-        <FaHome size={"20px"} className="menu-icon" />
+        <BiSolidHome size={"20px"} className="menu-icon" />
         Головна
       </Link>
-      <span
+      <Link
+        to="/service"
         onClick={() => setIsOpenUslugi((prev) => !prev)}
         className="menu-item"
       >
         <FaTruck size={"20px"} className="menu-icon" />
         Послуги
-        {/* <IoIosArrowDown /> */}
-      </span>
+        <IoIosArrowDown />
+      </Link>
       {isOpenUslugi && (
         <>
           <Link
@@ -82,7 +92,7 @@ const BurgerMenu = () => {
           >
             <div className="header-submenu">
               <span>UA - EU</span>
-              <IoIosArrowDown />
+              {/* <IoIosArrowDown /> */}
             </div>
             <ul className="submenu">
               <li>
@@ -124,7 +134,7 @@ const BurgerMenu = () => {
           >
             <div className="header-submenu">
               <span>EU - UA</span>
-              <IoIosArrowDown />
+              {/* <IoIosArrowDown /> */}
             </div>
             <ul className="submenu">
               <li>
@@ -166,7 +176,7 @@ const BurgerMenu = () => {
           >
             <div className="header-submenu">
               <span>PL - PL</span>
-              <IoIosArrowDown />
+              {/* <IoIosArrowDown /> */}
             </div>
             <ul className="submenu">
               <li>
@@ -179,31 +189,31 @@ const BurgerMenu = () => {
         </>
       )}
       <Link to="/#schedule" className="menu-item" onClick={handleLinkClick}>
-        <CiCalendarDate size={"20px"} className="menu-icon" />
+        <IoCalendarNumber size={"20px"} className="menu-icon" />
         Розклад рейсів
       </Link>
       <Link to="/for-companies" className="menu-item" onClick={handleLinkClick}>
-        <PiBagSimpleDuotone size={"20px"} className="menu-icon" />
+        <BsBriefcaseFill size={"20px"} className="menu-icon" />
         Для фірм
       </Link>
       <Link to="/about-us" className="menu-item" onClick={handleLinkClick}>
-        <IoBookOutline size={"20px"} className="menu-icon" />
+        <HiBuildingOffice size={"20px"} className="menu-icon" />
         Про Нас
       </Link>
       <Link to="/#faq" className="menu-item" onClick={handleLinkClick}>
-        <FaQuestion size={"20px"} className="menu-icon" />
+        <FaQuestionCircle size={"20px"} className="menu-icon" />
         Часті питання
       </Link>
       <Link to="/contacts" className="menu-item" onClick={handleLinkClick}>
-        <MdContactPhone size={"20px"} className="menu-icon" />
+        <FaUserPlus size={"20px"} className="menu-icon" />
         Контакти
       </Link>
       <Link to="/brandua" className="menu-item" onClick={handleLinkClick}>
-        <UA className="menu-icon" height={"16px"} width={"20px"} />
+        <img src={uaIcon} alt="My Icon" width={"20px"} className="menu-icon" />
         BrandUa
       </Link>
       <Link to="/promotions" className="menu-item" onClick={handleLinkClick}>
-        <RiDiscountPercentLine size={"20px"} className="menu-icon" />
+        <RiDiscountPercentFill size={"20px"} className="menu-icon" />
         Акції
       </Link>
       <div className="soc-links">
@@ -237,10 +247,23 @@ const BurgerMenu = () => {
         </Link>
       </div>
       <div className="chat-burger">
-        <Link to="https://t.me/IvancomTownBot">
-          <IoChatboxEllipsesOutline size={"48px"} />
-        </Link>
+        <div className="chat-cont">
+          <Link to="https://t.me/IvancomTownBot">
+            <div>
+              <img
+                src={consIcon}
+                alt="My Icon"
+                width={"20px"}
+                className="menu-icon"
+              />
+            </div>
+            <div>
+              <p>Online консультація</p>
+            </div>
+          </Link>
+        </div>
       </div>
+
       <div className="policy-burger">
         <p className="policy-item">
           © Всі права захищені.
