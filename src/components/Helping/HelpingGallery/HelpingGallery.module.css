@@ -12,12 +12,11 @@
 }
 
 .heading {
-  font-size: 2em;
   margin-bottom: 10px;
 }
 
 .description {
-  font-size: 1.2em;
+  font-size: 1rem;
   color: #555;
 }
 
