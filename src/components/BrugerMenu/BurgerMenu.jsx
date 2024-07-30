@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { slide as Menu } from "react-burger-menu";
 import { Link } from "react-router-dom";
 import {
@@ -12,22 +13,23 @@ import { FaTruck } from "react-icons/fa6";
 import { IoIosArrowDown, IoMdClose } from "react-icons/io";
 import "./BurgerMenu.css";
 import { useState, useRef, useEffect } from "react";
-import { CiCalendarDate } from "react-icons/ci";
-import { PiBagSimpleDuotone } from "react-icons/pi";
-import {
-  IoBookOutline,
-  IoCalendarNumber,
-  IoChatboxEllipsesOutline,
-} from "react-icons/io5";
-import { MdContactPhone } from "react-icons/md";
-import { RiDiscountPercentFill, RiDiscountPercentLine } from "react-icons/ri";
+
+import { IoCalendarNumber } from "react-icons/io5";
+
+import { RiDiscountPercentFill } from "react-icons/ri";
 
 import Logo from "../Logo/Logo";
 import { BiSolidHome } from "react-icons/bi";
 import { BsBriefcaseFill } from "react-icons/bs";
 import { HiBuildingOffice } from "react-icons/hi2";
 import uaIcon from "../../img/schedule/svg/Mask groupua.svg";
-import consIcon from "../../img/schedule/svg/Mask groupconsul.svg";
+import consIcon from "../../img/schedule/svg/consult.png";
+import facebIcon from "../../img/schedule/svg/fb.svg";
+import carIcon from "../../img/schedule/svg/carrera.svg";
+import insIcon from "../../img/schedule/svg/insta.svg";
+import tiktokIcon from "../../img/schedule/svg/tiktok.svg";
+import linkidnIcon from "../../img/schedule/svg/in.svg";
+import Icon from "../Icon/IconLinkidn";
 
 const BurgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -60,7 +62,7 @@ const BurgerMenu = () => {
       right
       pageWrapId={"page-wrap"}
       outerContainerId={"outer-container"}
-      // width={"280px"}
+      width={"278px"}
       customCrossIcon={<IoMdClose className="bm-cross-icon" />}
       crossButtonClassName={"bm-cross-icon"}
       isOpen={isOpen}
@@ -71,15 +73,15 @@ const BurgerMenu = () => {
         <Logo />
       </div>
       <Link to="/" className="menu-item" onClick={handleLinkClick}>
-        <BiSolidHome size={"20px"} className="menu-icon" />
+        <BiSolidHome size={"16px"} className="menu-icon" />
         Головна
       </Link>
       <Link
-        to="/service"
+        to="/#service"
         onClick={() => setIsOpenUslugi((prev) => !prev)}
         className="menu-item"
       >
-        <FaTruck size={"20px"} className="menu-icon" />
+        <FaTruck size={"16px"} className="menu-icon" />
         Послуги
         <IoIosArrowDown />
       </Link>
@@ -181,40 +183,45 @@ const BurgerMenu = () => {
             <ul className="submenu">
               <li>
                 <Link to="/services/pl-pl/request" onClick={handleLinkClick}>
-                  Звернутись за запитом
+                  Між відділеннями
                 </Link>
               </li>
             </ul>
           </Link>
         </>
       )}
+      <Link to="/brandua" className="menu-item" onClick={handleLinkClick}>
+        <img src={uaIcon} alt="My Icon" width={"16px"} className="menu-icon" />
+        BrandUa
+      </Link>
       <Link to="/#schedule" className="menu-item" onClick={handleLinkClick}>
-        <IoCalendarNumber size={"20px"} className="menu-icon" />
+        <IoCalendarNumber size={"16px"} className="menu-icon" />
         Розклад рейсів
       </Link>
       <Link to="/for-companies" className="menu-item" onClick={handleLinkClick}>
-        <BsBriefcaseFill size={"20px"} className="menu-icon" />
+        <BsBriefcaseFill size={"16px"} className="menu-icon" />
         Для фірм
       </Link>
       <Link to="/about-us" className="menu-item" onClick={handleLinkClick}>
-        <HiBuildingOffice size={"20px"} className="menu-icon" />
+        <HiBuildingOffice size={"16px"} className="menu-icon" />
         Про Нас
       </Link>
       <Link to="/#faq" className="menu-item" onClick={handleLinkClick}>
-        <FaQuestionCircle size={"20px"} className="menu-icon" />
+        <FaQuestionCircle size={"16px"} className="menu-icon" />
         Часті питання
       </Link>
       <Link to="/contacts" className="menu-item" onClick={handleLinkClick}>
-        <FaUserPlus size={"20px"} className="menu-icon" />
+        <FaUserPlus size={"16px"} className="menu-icon" />
         Контакти
       </Link>
-      <Link to="/brandua" className="menu-item" onClick={handleLinkClick}>
-        <img src={uaIcon} alt="My Icon" width={"20px"} className="menu-icon" />
-        BrandUa
+
+      <Link to="/promotions" className="menu-item" onClick={handleLinkClick}>
+        <RiDiscountPercentFill size={"16px"} className="menu-icon" />
+        Акції
       </Link>
       <Link to="/promotions" className="menu-item" onClick={handleLinkClick}>
-        <RiDiscountPercentFill size={"20px"} className="menu-icon" />
-        Акції
+        <img src={carIcon} alt="My Icon" width={"16px"} className="menu-icon" />
+        Кар'єра
       </Link>
       <div className="soc-links">
         <Link
@@ -222,46 +229,68 @@ const BurgerMenu = () => {
           className="soc-link"
           target="_blank"
         >
-          <FaFacebook />
+          {/* <FaFacebook /> */}
+          <img
+            src={facebIcon}
+            alt="My Icon"
+            width={"26px"}
+            className="menu-icon"
+          />
+          {/* <Icon className="menu-icon" /> */}
         </Link>
         <Link
           to="https://www.instagram.com/ivancom.poland/?igshid=NGVhN2U2NjQ0Yg%3D%3D"
           className="soc-link"
           target="_blank"
         >
-          <FaInstagram />
+          {/* <FaInstagram /> */}
+          <img
+            src={insIcon}
+            alt="My Icon"
+            width={"26px"}
+            className="menu-icon"
+          />
         </Link>
         <Link
           to="https://www.tiktok.com/@ivancom.poland?_t=8iCTrsyAonB"
           className="soc-link"
           target="_blank"
         >
-          <FaTiktok />
+          {/* <FaTiktok /> */}
+          <img
+            src={tiktokIcon}
+            alt="My Icon"
+            width={"26px"}
+            className="menu-icon"
+          />
         </Link>
         <Link
           to="https://ru.linkedin.com/company/ivancom"
           className="soc-link"
           target="_blank"
         >
-          <FaLinkedin />
+          {/* <FaLinkedin /> */}
+          <img
+            src={linkidnIcon}
+            alt="My Icon"
+            width={"26px"}
+            className="menu-icon"
+          />
         </Link>
       </div>
       <div className="chat-burger">
-        <div className="chat-cont">
-          <Link to="https://t.me/IvancomTownBot">
-            <div>
-              <img
-                src={consIcon}
-                alt="My Icon"
-                width={"20px"}
-                className="menu-icon"
-              />
-            </div>
-            <div>
-              <p>Online консультація</p>
-            </div>
-          </Link>
-        </div>
+        <Link to="https://t.me/IvancomTownBot" className="consult">
+          <img
+            src={consIcon}
+            alt="My Icon"
+            width={"26px"}
+            className="menu-icon"
+          />
+
+          <div>
+            <p>Online - консультація</p>
+          </div>
+        </Link>
       </div>
 
       <div className="policy-burger">

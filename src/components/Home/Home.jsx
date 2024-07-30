@@ -16,6 +16,7 @@ function Home() {
   const faqRef = useRef(null);
   const scheduleRef = useRef(null);
   const mainRef = useRef(null);
+  const serviceRef = useRef(null);
   const location = useLocation();
 
   useEffect(() => {
@@ -27,6 +28,9 @@ function Home() {
     }
     if (location.hash === "" && mainRef.current) {
       mainRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+    if (location.hash === "#service" && serviceRef.current) {
+      serviceRef.current.scrollIntoView({ behavior: "smooth" });
     }
   }, [location.hash]);
 
@@ -49,7 +53,7 @@ function Home() {
           />
         </div>
       </div>
-      <div className={s.body} ref={sectionRef}>
+      <div className={s.body} ref={serviceRef}>
         <h2 className={s.bodytitle}>Ми відправляємо</h2>
         <p className={s.bodydescr}>
           будь-які посилки майже без обмежень! В нас кожен день – робочий!

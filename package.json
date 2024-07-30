@@ -13,6 +13,7 @@
     "@szhsin/react-accordion": "^1.2.4",
     "country-flag-icons": "^1.5.13",
     "formik": "^2.4.6",
+    "handy-svg": "^1.0.8",
     "modern-normalize": "^2.0.0",
     "nanoid": "^5.0.7",
     "react": "^18.3.1",
