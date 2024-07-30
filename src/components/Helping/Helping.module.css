@@ -95,6 +95,9 @@
 }
 
 @media (min-width: 768px) {
+  .container {
+    padding: 60px 20px;
+  }
   .textfull {
     font-size: 14px !important;
     line-height: 1.5;
