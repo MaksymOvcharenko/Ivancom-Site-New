@@ -1,0 +1,27 @@
+.cont {
+  background: var(--black);
+
+  padding: 60px 20px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  && a,
+  p {
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+  }
+}
+.links {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+  && a {
+    &&:hover {
+      color: rgba(0, 127, 206, 0.7);
+    }
+  }
+}

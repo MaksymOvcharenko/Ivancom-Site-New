@@ -107,7 +107,6 @@ const Helping = () => {
               allowFullScreen
             ></iframe>
           </div>
-          <div className={s.gallery}></div>
         </div>
       </div>
       <HelpingGallery />

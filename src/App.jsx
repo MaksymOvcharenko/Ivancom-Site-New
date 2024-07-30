@@ -14,6 +14,7 @@ import Promotions from "./components/Promotions/Promotions";
 import styles from "./App.module.css";
 
 import BurgerMenu from "./components/BrugerMenu/BurgerMenu";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
           <Route path="/brandua" element={<BrandUa />} />
           <Route path="/promotions" element={<Promotions />} />
         </Routes>
+        <Footer />
       </main>
     </div>
   );

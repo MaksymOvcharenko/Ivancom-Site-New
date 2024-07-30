@@ -125,6 +125,7 @@
   }
   .containertruck {
     padding: 120px 32px;
+    padding-bottom: 60px;
   }
 }
 
