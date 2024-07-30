@@ -2,10 +2,10 @@
 import { slide as Menu } from "react-burger-menu";
 import { Link } from "react-router-dom";
 import {
-  FaFacebook,
-  FaInstagram,
-  FaTiktok,
-  FaLinkedin,
+  // FaFacebook,
+  // FaInstagram,
+  // FaTiktok,
+  // FaLinkedin,
   FaQuestionCircle,
   FaUserPlus,
 } from "react-icons/fa";
@@ -29,7 +29,7 @@ import carIcon from "../../img/schedule/svg/carrera.svg";
 import insIcon from "../../img/schedule/svg/insta.svg";
 import tiktokIcon from "../../img/schedule/svg/tiktok.svg";
 import linkidnIcon from "../../img/schedule/svg/in.svg";
-import Icon from "../Icon/IconLinkidn";
+// import Icon from "../Icon/IconLinkidn";
 
 const BurgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
