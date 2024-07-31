@@ -16,20 +16,19 @@ const EuUa = () => {
   //     sectionRef.current.scrollIntoView({ behavior: "smooth" });
   //   };
   const image = [
-    { src: cargo, url: "/services/eu-ua/packages", title: "Посилки" },
-    { src: medicines, url: "/services/eu-ua/medicines", title: "Ліки" },
-    { src: animals, url: "/services/eu-ua/animals", title: "Тварини" },
-    { src: moving, url: "/services/eu-ua/moving", title: "Переїзди" },
-    { src: tires, url: "/services/eu-ua/tires", title: "Шини та диски" },
-    { src: bikes, url: "/services/eu-ua/bikes", title: "Велосипеди" },
+    { src: cargo, url: "/services/pl-ua/packages", title: "Посилки" },
+    { src: medicines, url: "/services/pl-ua/medicines", title: "Ліки" },
+    { src: animals, url: "/services/pl-ua/animals", title: "Тварини" },
+    { src: moving, url: "/services/pl-ua/moving", title: "Переїзди" },
+    { src: tires, url: "/services/pl-ua/tires", title: "Шини та диски" },
+    { src: bikes, url: "/services/pl-ua/bikes", title: "Велосипеди" },
   ];
   return (
     <>
       <div className={s.header} ref={mainRef}>
         <div className={s.home}>
           <h1 className={s.title}>
-            Швидка міжнародна доставка посилок з України в Польщу та інші країни
-            Європи
+            Доставка посилок з Польщі та Європи в Україну
           </h1>
           <div className={s.iconplace}>
             {/* <IoIosArrowDown
