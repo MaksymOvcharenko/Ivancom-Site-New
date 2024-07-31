@@ -65,7 +65,7 @@ function Home() {
             li3={"Три види тарифів"}
             li4={"Доставка без вихідних"}
             li5={"Розрахунок в гривні та валюті"}
-            btnUrl={"/"}
+            btnUrl={"/services/ua-eu"}
           >
             <span className={s.blue}>U</span>
             <span className={s.yellow}>A</span> - Весь світ
