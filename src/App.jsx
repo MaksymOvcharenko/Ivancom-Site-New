@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
-import UA_PL from "./components/Services/UA_PL/UA_PL";
+
 import PL_UA from "./components/Services/PL_UA/PL_UA";
 import PL_PL from "./components/Services/PL_PL/PL_PL";
 import Schedule from "./components/Schedule/Schedule";
@@ -15,6 +15,7 @@ import styles from "./App.module.css";
 
 import BurgerMenu from "./components/BrugerMenu/BurgerMenu";
 import Footer from "./components/Footer/Footer";
+import UaEu from "./pages/Ua-Eu/UaEu";
 
 function App() {
   return (
@@ -25,9 +26,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services/" element={<h2>Service</h2>} />
-          <Route path="/services/ua-pl" element={<UA_PL />} />
+          <Route path="services/ua-eu" element={<UaEu />} />
           <Route path="/services/pl-ua" element={<PL_UA />} />
           <Route path="/services/pl-pl" element={<PL_PL />} />
+
           <Route path="/#schedule" element={<Schedule />} />
           <Route path="/for-companies" element={<ForCompanies />} />
           <Route path="/about-us" element={<AboutUs />} />
@@ -35,6 +37,7 @@ function App() {
           <Route path="/contacts" element={<Contacts />} />
           <Route path="/brandua" element={<BrandUa />} />
           <Route path="/promotions" element={<Promotions />} />
+          <Route path="*" element={<h3>Not Found</h3>} />
         </Routes>
         <Footer />
       </main>

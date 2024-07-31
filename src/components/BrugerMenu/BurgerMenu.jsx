@@ -88,7 +88,7 @@ const BurgerMenu = () => {
       {isOpenUslugi && (
         <>
           <Link
-            to="/services/ua-pl"
+            to="services/ua-eu"
             className="submenu-item"
             onClick={handleLinkClick}
           >
