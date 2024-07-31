@@ -2,7 +2,6 @@ import { Route, Routes } from "react-router-dom";
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
 
-import PL_UA from "./components/Services/PL_UA/PL_UA";
 import PL_PL from "./components/Services/PL_PL/PL_PL";
 import Schedule from "./components/Schedule/Schedule";
 import ForCompanies from "./components/ForCompanies/ForCompanies";
@@ -16,6 +15,8 @@ import styles from "./App.module.css";
 import BurgerMenu from "./components/BrugerMenu/BurgerMenu";
 import Footer from "./components/Footer/Footer";
 import UaEu from "./pages/Ua-Eu/UaEu";
+import EuUA from "./pages/Eu-Ua/EuUA";
+import ChangeEu from "./pages/Eu-Ua/ChangeEU/ChangeEu";
 
 function App() {
   return (
@@ -27,7 +28,9 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/services/" element={<h2>Service</h2>} />
           <Route path="services/ua-eu" element={<UaEu />} />
-          <Route path="/services/pl-ua" element={<PL_UA />} />
+          <Route path="/services/change" element={<ChangeEu />} />
+          <Route path="/services/pl-ua" element={<EuUA />} />
+          <Route path="/services/eu-ua" element={<EuUA />} />
           <Route path="/services/pl-pl" element={<PL_PL />} />
 
           <Route path="/#schedule" element={<Schedule />} />

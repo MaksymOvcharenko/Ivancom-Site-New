@@ -76,7 +76,7 @@ function Home() {
             li3={"Два види тарифів"}
             li4={"Доставка без вихідних"}
             li5={"Розрахунок в гривні та валюті"}
-            btnUrl={"/"}
+            btnUrl={"/services/change"}
           >
             Весь світ - <span className={s.blue}>U</span>
             <span className={s.yellow}>A</span>

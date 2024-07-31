@@ -130,7 +130,7 @@ const BurgerMenu = () => {
             </ul>
           </Link>
           <Link
-            to="/services/pl-ua"
+            to="/services/change"
             className="submenu-item"
             onClick={handleLinkClick}
           >
@@ -140,32 +140,32 @@ const BurgerMenu = () => {
             </div>
             <ul className="submenu">
               <li>
-                <Link to="/services/pl-ua/packages" onClick={handleLinkClick}>
+                <Link to="/services/eu-ua/packages" onClick={handleLinkClick}>
                   Посилки
                 </Link>
               </li>
               <li>
-                <Link to="/services/pl-ua/medicines" onClick={handleLinkClick}>
+                <Link to="/services/eu-ua/medicines" onClick={handleLinkClick}>
                   Ліки
                 </Link>
               </li>
               <li>
-                <Link to="/services/pl-ua/animals" onClick={handleLinkClick}>
+                <Link to="/services/eu-ua/animals" onClick={handleLinkClick}>
                   Тварини
                 </Link>
               </li>
               <li>
-                <Link to="/services/pl-ua/moving" onClick={handleLinkClick}>
+                <Link to="/services/eu-ua/moving" onClick={handleLinkClick}>
                   Переїзди
                 </Link>
               </li>
               <li>
-                <Link to="/services/pl-ua/tires" onClick={handleLinkClick}>
+                <Link to="/services/eu-ua/tires" onClick={handleLinkClick}>
                   Колеса та шини
                 </Link>
               </li>
               <li>
-                <Link to="/services/pl-ua/bikes" onClick={handleLinkClick}>
+                <Link to="/services/eu-ua/bikes" onClick={handleLinkClick}>
                   Велосипеди
                 </Link>
               </li>
