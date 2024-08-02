@@ -3,3 +3,25 @@
   width: 100vw;
   height: auto;
 }
+.home {
+  height: 70vh;
+  padding: 20px;
+  color: white;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../../../components/CargoType/img/cargo.png");
+  background-size: cover; /* Или contain, если нужно вписать изображение в контейнер */
+  background-repeat: no-repeat; /* Чтобы изображение не повторялось */
+  background-position: center; /* Центрирование изображения */
+  margin: 0 auto;
+}
+
+.description {
+  margin-top: 52px;
+  font-size: 24px;
+  text-align: center;
+}
