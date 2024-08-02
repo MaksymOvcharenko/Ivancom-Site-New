@@ -13,7 +13,7 @@
   align-items: center;
   justify-content: center;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../../../components/CargoType/img/cargo.png");
+    url("../../../../components/CargoType/img/liky.png");
   background-size: cover; /* Или contain, если нужно вписать изображение в контейнер */
   background-repeat: no-repeat; /* Чтобы изображение не повторялось */
   background-position: center; /* Центрирование изображения */
@@ -24,4 +24,187 @@
   margin-top: 52px;
   font-size: 24px;
   text-align: center;
+}
+.title {
+  font-size: 32px;
+  text-align: center;
+  margin-top: 120px;
+  line-height: 1.6;
+  font-weight: 600;
+}
+.main,
+.rules {
+  padding: 90px 20px;
+  margin: 0 auto;
+  color: var(--black);
+  text-align: center;
+}
+.maintitle {
+  font-size: 32px;
+  color: var(--black);
+
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.maindesc {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.mainlist {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.mainitem {
+  height: 360px;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  background-color: #dcf2f8;
+  border-color: #e6e6e6;
+  border-radius: 5px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+}
+.itemtitle {
+  margin-top: 12px;
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.itemdescr {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.itemlist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin-bottom: 40px;
+}
+.item {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 300;
+}
+.itembtn {
+  padding: 12px 20px;
+  color: #ffffff;
+  background-color: #0aa7da;
+  border-radius: 5px;
+}
+.formsection {
+  padding: 40px;
+}
+.rulescont {
+  border: 5px solid #0aa7da;
+  padding: 20px;
+  margin-top: 48px;
+}
+.rulesitem {
+  color: rgb(10, 167, 218);
+  font-weight: 600;
+  text-align: left;
+  max-width: 640px;
+  && a {
+    color: rgb(10, 167, 218);
+  }
+  && span {
+    text-decoration: underline;
+  }
+}
+.rules {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 1280px) {
+  .home {
+    height: 70vh;
+    padding: 40px;
+  }
+
+  .description {
+    font-size: 32px;
+    text-align: center;
+  }
+  .title {
+    font-size: 48px;
+  }
+  .main,
+  .rules {
+    padding: 120px 60px;
+  }
+  .maintitle {
+    font-size: 36px;
+
+    margin-bottom: 32px;
+  }
+  .maindesc {
+    font-size: 28px;
+    margin-bottom: 60px;
+  }
+  .mainlist {
+    flex-direction: row;
+    gap: 32px;
+  }
+  .itemcont {
+    display: flex;
+    flex-direction: column;
+
+    height: 280px;
+  }
+  .mainitem {
+    height: 440px;
+    width: 360px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 70px 30px;
+  }
+  .itemtitle {
+    margin-top: 12px;
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .itemdescr {
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  .itemlist {
+  }
+  .item {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 300;
+  }
+  .itembtn {
+    padding: 12px 20px;
+    color: #ffffff;
+    background-color: #0aa7da;
+    border-radius: 5px;
+    margin-bottom: auto;
+    &&:hover {
+      background-color: #01426b;
+    }
+  }
+  .formsection {
+    padding: 100px;
+  }
+  .rulesitem {
+    font-size: 24px;
+  }
+  .rulescont {
+    margin-top: 32px;
+    max-width: 880px;
+    padding: 60px;
+  }
 }

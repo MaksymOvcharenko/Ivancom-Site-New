@@ -56,6 +56,7 @@ function App() {
           <Route path="/contacts" element={<Contacts />} />
           <Route path="/brandua" element={<BrandUa />} />
           <Route path="/promotions" element={<Promotions />} />
+          <Route path="/viddilenya" element={<h2>Viddilennya</h2>} />
           <Route path="*" element={<h3>Not Found</h3>} />
         </Routes>
         <Footer />
