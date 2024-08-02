@@ -5,6 +5,7 @@ import { testUrl } from "../url";
 import FormMedicinesUA from "./FormMedicinesUA/FormMedicinesUA";
 import s from "./MedicinesUa.module.css";
 import { useRef } from "react";
+import Steps from "../../../../components/Steps/Steps";
 const MedicinesUa = () => {
   const formRef = useRef();
   const handleScroll = () => {
@@ -107,6 +108,9 @@ const MedicinesUa = () => {
             </li>
           </ul>
         </div>
+      </section>
+      <section className={s.steps}>
+        <Steps />
       </section>
       <section ref={formRef} className={s.formsection}>
         <FormMedicinesUA url={testUrl} />

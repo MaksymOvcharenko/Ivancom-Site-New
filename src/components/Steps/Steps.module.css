@@ -1,0 +1,59 @@
+.home {
+  height: 70vh;
+  padding: 20px;
+  color: white;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./steps.png");
+  background-size: cover; /* Или contain, если нужно вписать изображение в контейнер */
+  background-repeat: no-repeat; /* Чтобы изображение не повторялось */
+  background-position: center; /* Центрирование изображения */
+  margin: 0 auto;
+}
+
+.description {
+  margin-top: 52px;
+  font-size: 24px;
+  text-align: center;
+}
+.title {
+  font-size: 32px;
+  text-align: center;
+  margin-top: 120px;
+  line-height: 1.6;
+  font-weight: 600;
+}
+.stepcont {
+  padding: 48px 24px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.steplist {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap: 40px;
+  max-width: 720px;
+}
+.stepitem {
+  display: flex;
+  align-items: top;
+  justify-content: left;
+  gap: 20px;
+}
+.icon {
+  fill: rgb(10, 167, 218);
+}
+
+.texticon {
+  && span {
+    color: var(--black);
+    font-weight: 600;
+  }
+}
