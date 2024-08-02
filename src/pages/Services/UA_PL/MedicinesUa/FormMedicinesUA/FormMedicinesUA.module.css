@@ -1,0 +1,120 @@
+/* Основні стилі */
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.fieldContainer {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.field,
+.phoneInput input,
+.autocomplete__input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.phoneInputContainer {
+  width: 100%;
+}
+
+.errorMessage {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+#checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox {
+  margin-left: 10px;
+}
+
+.submitButton {
+  padding: 10px 20px;
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submitButton:hover {
+  background-color: #45a049;
+}
+
+/* Медіа-запити */
+
+/* Мобільні пристрої (до 320px) */
+@media (max-width: 320px) {
+  .label {
+    font-size: 14px;
+  }
+
+  .field,
+  .phoneInput input,
+  .autocomplete__input {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .submitButton {
+    padding: 8px 16px;
+  }
+}
+
+/* Планшети (до 768px) */
+@media (max-width: 768px) {
+  .label {
+    font-size: 15px;
+  }
+
+  .field,
+  .phoneInput input,
+  .autocomplete__input {
+    font-size: 13px;
+    padding: 9px;
+  }
+
+  .submitButton {
+    padding: 9px 18px;
+  }
+}
+
+/* Десктопи (до 1280px) */
+@media (max-width: 1280px) {
+  .label {
+    font-size: 16px;
+  }
+
+  .field,
+  .phoneInput input,
+  .autocomplete__input {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .submitButton {
+    padding: 10px 20px;
+  }
+}

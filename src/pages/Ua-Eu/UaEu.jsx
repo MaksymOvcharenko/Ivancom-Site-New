@@ -9,6 +9,8 @@ import moving from "../../components/CargoType/img/pereizd.jpg";
 import tires from "../../components/CargoType/img/opony.png";
 import bikes from "../../components/CargoType/img/rover.png";
 import FormTest from "../../components/FormTest/FormTest";
+import { testUrl } from "../Services/UA_PL/url";
+testUrl;
 const UaEu = () => {
   //   const sectionRef = useRef(null);
   const mainRef = useRef(null);
@@ -41,7 +43,7 @@ const UaEu = () => {
         </div>
         <CargoType images={image} />
       </div>
-      <FormTest />
+      <FormTest url={testUrl} />
     </>
   );
 };
