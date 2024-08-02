@@ -69,13 +69,13 @@
 /* Мобільні пристрої (до 320px) */
 @media (min-width: 320px) {
   .label {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .field,
   .phoneInput input,
   .autocomplete__input {
-    font-size: 12px;
+    font-size: 16px;
     padding: 8px;
   }
 
