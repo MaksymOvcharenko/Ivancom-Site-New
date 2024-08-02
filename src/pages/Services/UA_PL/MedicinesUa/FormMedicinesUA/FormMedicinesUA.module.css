@@ -87,13 +87,13 @@
 /* Планшети (до 768px) */
 @media (min-width: 768px) {
   .label {
-    font-size: 15px;
+    font-size: 16px;
   }
 
   .field,
   .phoneInput input,
   .autocomplete__input {
-    font-size: 13px;
+    font-size: 16px;
     padding: 9px;
   }
 
