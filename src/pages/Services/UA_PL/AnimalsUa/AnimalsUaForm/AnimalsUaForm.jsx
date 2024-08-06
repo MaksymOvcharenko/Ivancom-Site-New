@@ -4,8 +4,8 @@ import { Field, Formik, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
-import { sendData } from "../../api";
-import s from "./FormMedicinesUA.module.css";
+import { sendFileData } from "../../api";
+import s from "./AnimalsUaForm.module.css";
 import Autocomplete from "react-google-autocomplete";
 
 // Валидация
@@ -24,11 +24,10 @@ const validationSchema = Yup.object().shape({
     .required("Required"),
 });
 
-const FormMedicinesUA = ({ url }) => {
+const AnimalsUaForm = ({ url }) => {
   const handleSubmit = async (values, { setSubmitting, resetForm }) => {
     console.log(values);
 
-    // 1. Создаем FormData из значений формы
     const formData = new FormData();
     formData.append("names", values.names);
     formData.append("email", values.email);
@@ -40,19 +39,41 @@ const FormMedicinesUA = ({ url }) => {
     formData.append("checked", values.checked);
     formData.append("zakaz", values.zakaz);
 
-    try {
-      await sendData(url, formData);
-      console.log("Success!");
-      alert("Спасибо за заявку!");
-      resetForm(); // Сброс формы после успешной отправки
-    } catch (error) {
-      console.error("Error!", error.message);
-      alert("Ошибка при отправке данных.");
-    } finally {
-      setSubmitting(false); // Завершение процесса отправки
+    if (values.file) {
+      const reader = new FileReader();
+      reader.onloadend = async () => {
+        const base64data = reader.result.split(",")[1];
+        formData.append("file", base64data);
+        formData.append("fileName", values.file.name);
+        formData.append("fileMimeType", values.file.type);
+
+        try {
+          await sendFileData(url, formData);
+          console.log("Success!");
+          alert("Спасибо за заявку!");
+          resetForm();
+        } catch (error) {
+          console.error("Error!", error.message);
+          alert("Ошибка при отправке данных.");
+        } finally {
+          setSubmitting(false);
+        }
+      };
+      reader.readAsDataURL(values.file);
+    } else {
+      try {
+        await sendFileData(url, formData);
+        console.log("Success!");
+        alert("Спасибо за заявку!");
+        resetForm();
+      } catch (error) {
+        console.error("Error!", error.message);
+        alert("Ошибка при отправке данных.");
+      } finally {
+        setSubmitting(false);
+      }
     }
   };
-
   return (
     <Formik
       className={s.form}
@@ -66,7 +87,8 @@ const FormMedicinesUA = ({ url }) => {
         adress: "",
         zakaz: "",
         checked: false,
-      }} // Вказати Значення полів початкові
+        file: null, // начальное значение для файла
+      }}
       validationSchema={validationSchema}
       onSubmit={handleSubmit}
     >
@@ -200,11 +222,6 @@ const FormMedicinesUA = ({ url }) => {
               }}
               placeholder="Країна, місто, вулиця, будинок, квартира, індекс"
             />
-            <ErrorMessage
-              className={s.errorMessage}
-              name="adress"
-              component="div"
-            />
           </div>
           <div className={s.fieldContainer}>
             <label className={s.label} id="checkbox">
@@ -217,6 +234,17 @@ const FormMedicinesUA = ({ url }) => {
               component="div"
             />
           </div>
+          <div className={s.fieldContainer}>
+            <input
+              className={s.field}
+              type="file"
+              name="file"
+              onChange={(event) => {
+                setFieldValue("file", event.currentTarget.files[0]);
+              }}
+            />
+          </div>
+
           <button className={s.submitButton} type="submit">
             Відправити!
           </button>
@@ -226,4 +254,4 @@ const FormMedicinesUA = ({ url }) => {
   );
 };
 
-export default FormMedicinesUA;
+export default AnimalsUaForm;

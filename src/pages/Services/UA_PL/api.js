@@ -10,3 +10,28 @@ export const sendData = async (url, formData) => {
     throw error;
   }
 };
+// export const sendFileData = async (url, formData) => {
+//   try {
+//     const response = await axios.post(url, formData, {
+//       headers: {
+//         "Content-Type": "multipart/form-data",
+//       },
+//     });
+//     return response.data;
+//   } catch (error) {
+//     throw new Error(error.response.data || "Error uploading file");
+//   }
+// };
+
+export const sendFileData = async (url, data) => {
+  try {
+    const response = await axios.post(url, data, {
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
+    });
+    return response.data;
+  } catch (error) {
+    throw new Error(error.response.data || "Error uploading file");
+  }
+};

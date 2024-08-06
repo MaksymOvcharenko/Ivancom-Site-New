@@ -21,6 +21,7 @@ import { useEffect } from "react";
 import WordUa from "./pages/WordUa/WordUa";
 import UaEuCargo from "./pages/Ua-Eu/UaEuCargo/UaEuCargo";
 import MedicinesUa from "./pages/Services/UA_PL/MedicinesUa/MedicinesUa";
+import AnimalsUa from "./pages/Services/UA_PL/AnimalsUa/AnimalsUa";
 
 function App() {
   const ScrollToTop = () => {
@@ -44,6 +45,7 @@ function App() {
           <Route path="/services/ua-eu" element={<UaEu />} />
           <Route path="/services/ua-eu/packages" element={<UaEuCargo />} />
           <Route path="services/ua-eu/medicines" element={<MedicinesUa />} />
+          <Route path="services/ua-eu/animals" element={<AnimalsUa />} />
           <Route path="/services/change" element={<ChangeEu />} />
           <Route path="/services/pl-ua" element={<EuUA />} />
           <Route path="/services/eu-ua" element={<WordUa />} />
